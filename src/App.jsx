@@ -28,7 +28,7 @@ function App() {
       <div className="die-container">
         {diceElements}
       </div>
-      <button onClick={handleRollDiceButtonClick}>Roll Dice</button>
+      <button onClick={handleRollDiceButtonClick} className="btn-roll-dice">Roll</button>
     </main>
   )
 }
