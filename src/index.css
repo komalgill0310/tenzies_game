@@ -8,21 +8,18 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  background-color: #fff;
+  /* background-color: #fff;
   display: flex;
   margin: auto;
-  min-height: 100vh;
+  min-height: 100vh; */
 }
 
 body {
   margin: 0;
   display: flex;
-  width: 360px;
-  height: 379px;
   background-color: #0b2434;
-  padding: 30px 35px 29px 35px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  height: 100vh;
 }
