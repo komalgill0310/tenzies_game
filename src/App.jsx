@@ -3,6 +3,18 @@ import Die from './components/Die'
 
 function App() {
 
+  function allNewDice(){
+    const diceArr = []
+    const totalDice = 10
+    for (let i = 0; i < totalDice; i++) {
+      const dieNum = Math.floor(Math.random()*6) + 1
+      diceArr.push(dieNum)      
+    }
+    console.log(diceArr)
+  }
+
+  allNewDice()
+
   return (
     <main>
       <div className="die-container">
