@@ -2,6 +2,7 @@ main {
   /*Display stuff*/
   display: flex;
   flex-shrink: 0;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   /*Box model stuff*/
