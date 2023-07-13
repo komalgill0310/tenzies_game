@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-
+import { nanoid } from 'nanoid'
 import './App.css'
 import Die from './components/Die'
 
@@ -16,7 +16,7 @@ function App() {
     return diceArr
   }
 
-  const diceElements = dieValuesArr.map((dieValue) => <Die value={dieValue.value} />)
+  const diceElements = dieValuesArr.map((dieValue) => <Die key={nanoid()} value={dieValue.value} />)
 
   function handleRollDiceButtonClick(){
     setDieValuesArr(allNewDice())
