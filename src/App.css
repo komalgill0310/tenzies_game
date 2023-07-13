@@ -49,6 +49,7 @@ main {
   border-radius: 5px;
   background-color: #5035ff;
   /*Typography stuff*/
+  font-family: "Karla", sans-serif;
   font-size: 16.384px;
   font-weight: 700;
   text-align: center;
