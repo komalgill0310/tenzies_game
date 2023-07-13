@@ -11,13 +11,12 @@ function App() {
     const totalDice = 10
     for (let i = 0; i < totalDice; i++) {
       const dieNum = Math.floor(Math.random()*6) + 1
-      diceArr.push(dieNum)      
+      diceArr.push({value: dieNum, isHeld: false})      
     }
     return diceArr
   }
 
-  const diceElements = dieValuesArr.map((dieValue,i) => <Die key={i} value={dieValue} />)
-  console.log(diceElements);
+  const diceElements = dieValuesArr.map((dieValue) => <Die value={dieValue.value} />)
 
   function handleRollDiceButtonClick(){
     setDieValuesArr(allNewDice())
