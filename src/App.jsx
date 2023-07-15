@@ -10,10 +10,13 @@ function App() {
     const diceArr = []
     const totalDice = 10
     for (let i = 0; i < totalDice; i++) {
-      const dieNum = Math.floor(Math.random()*6) + 1
-      diceArr.push({id: nanoid(), value: dieNum, isHeld: false})      
+      diceArr.push(createDieObject())      
     }
     return diceArr
+  }
+
+  function createDieObject(){
+    return {id: nanoid(), value: Math.floor(Math.random()*6) + 1, isHeld: false}
   }
 
   const diceElements = dieValuesArr.map((dieValue) => (
@@ -25,7 +28,9 @@ function App() {
     ))
 
   function handleRollDiceButtonClick(){
-    setDieValuesArr(allNewDice())
+    setDieValuesArr(prevDieValues => prevDieValues.map(die => {
+      return die.isHeld ? die : createDieObject()
+    }))
   }
 
   function holdDice(diceId){
