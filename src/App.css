@@ -13,6 +13,18 @@ main {
   background: #f5f5f5;
 }
 
+.title {
+  font-size: 40px;
+  margin: 0;
+}
+
+.instructions {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin-top: 0;
+  text-align: center;
+}
+
 .die-container {
   /*Display stuff*/
   display: grid;
@@ -41,7 +53,7 @@ main {
 
 .btn-roll-dice {
   /*Box model stuff*/
-  width: 92.16px;
+  width: 130.16px;
   height: 35.84px;
   margin-top: 26px;
   border: none;

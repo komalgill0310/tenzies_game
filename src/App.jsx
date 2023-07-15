@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { nanoid } from "nanoid";
 import "./App.css";
 import Die from "./components/Die";
+import Confetti from "./components/Confetti";
 
 function App() {
   const [dieValuesArr, setDieValuesArr] = useState(allNewDice());
@@ -14,7 +15,6 @@ function App() {
     const allDieValues = dieValuesArr.every((die) => die.value === dieValue);
     if (allDieHeld && allDieValues) {
       setTenzies(true);
-      console.log("I won");
     }
   }, [dieValuesArr]);
 
@@ -62,9 +62,15 @@ function App() {
 
   return (
     <main>
+      <h1 className="title">Tenzies</h1>
+      <p className="instructions">
+        Roll until all dice are the same. Click each die to freeze it at its
+        current value between rolls.
+      </p>
+      {tenzies && <Confetti />}
       <div className="die-container">{diceElements}</div>
       <button onClick={handleRollDiceButtonClick} className="btn-roll-dice">
-        Roll
+        {tenzies ? "New Game" : "Roll"}
       </button>
     </main>
   );
