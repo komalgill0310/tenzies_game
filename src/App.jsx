@@ -16,10 +16,24 @@ function App() {
     return diceArr
   }
 
-  const diceElements = dieValuesArr.map((dieValue) => <Die key={dieValue.id} value={dieValue.value} />)
+  const diceElements = dieValuesArr.map((dieValue) => (
+      <Die key={dieValue.id}
+          value={dieValue.value}
+          isHeld={dieValue.isHeld}
+          holdDice={() => holdDice(dieValue.id)}
+      />
+    ))
 
   function handleRollDiceButtonClick(){
     setDieValuesArr(allNewDice())
+  }
+
+  function holdDice(diceId){
+    setDieValuesArr((prevDieValuesArr) =>
+      prevDieValuesArr.map((die) => {
+        return die.id === diceId ? {...die, isHeld: !die.isHeld} : die
+      })
+    );
   }
 
   return (
