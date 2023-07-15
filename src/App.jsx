@@ -60,6 +60,11 @@ function App() {
     );
   }
 
+  function resetGame() {
+    setDieValuesArr(allNewDice());
+    setTenzies(false);
+  }
+
   return (
     <main>
       <h1 className="title">Tenzies</h1>
@@ -69,7 +74,10 @@ function App() {
       </p>
       {tenzies && <Confetti />}
       <div className="die-container">{diceElements}</div>
-      <button onClick={handleRollDiceButtonClick} className="btn-roll-dice">
+      <button
+        onClick={tenzies ? resetGame : handleRollDiceButtonClick}
+        className="btn-roll-dice"
+      >
         {tenzies ? "New Game" : "Roll"}
       </button>
     </main>
