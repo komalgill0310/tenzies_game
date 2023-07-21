@@ -43,7 +43,7 @@ export default function GameStats(props) {
     return timeInSec;
   }
 
-  function convertSecToMinAndSec(timeToConvert) {
+  function convertTimeToMinAndSecFormat(timeToConvert) {
     if (timeToConvert < 60) {
       return `${timeToConvert}sec`;
     } else {
@@ -58,11 +58,13 @@ export default function GameStats(props) {
       <div className="game-stats-time">
         <p className="time-to-win">
           Time to Win:{" "}
-          <span>{tenzies ? convertSecToMinAndSec(time) : "00:00"}</span>
+          <span>{tenzies ? convertTimeToMinAndSecFormat(time) : "00:00"}</span>
         </p>
         <p className="best-time">
           Best Time:{" "}
-          <span>{bestTime ? convertSecToMinAndSec(bestTime) : "00:00"}</span>
+          <span>
+            {bestTime ? convertTimeToMinAndSecFormat(bestTime) : "00:00"}
+          </span>
         </p>
       </div>
       <p className="game-stats-rolls">Number of Rolls: {numOfRolls}</p>
