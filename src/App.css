@@ -18,7 +18,8 @@ main {
   margin: 0;
 }
 
-.instructions {
+.instructions,
+.game-stats {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   margin-top: 0;
@@ -70,21 +71,28 @@ main {
   cursor: pointer;
 }
 
-/* time and rolls Css */
-.header {
+/* Styles for the Time and Rolls elements */
+.game-stats {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
-  margin: 20px 0 31px;
+  margin-bottom: 31px;
   width: 420px;
 }
 
-.header div {
+.game-stats-time {
   margin-right: 41px;
 }
 
-.header p {
+.game-stats-time p {
   margin: 0;
-  padding: 0;
-  font-size: 13px;
+  padding: 0 0 5px 0;
+}
+
+.best-time {
+  margin-left: 0;
+}
+
+.game-stats-time span {
+  font-weight: bold;
 }

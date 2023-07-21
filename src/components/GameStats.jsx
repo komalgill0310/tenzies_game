@@ -56,10 +56,13 @@ export default function GameStats(props) {
   return (
     <div className="game-stats">
       <div className="game-stats-time">
-        <p>Time to Win: {tenzies ? convertSecToMinAndSec(time) : "00:00"}</p>
-        <p>
-          Best Time:
-          {bestTime ? convertSecToMinAndSec(bestTime) : "00:00"}
+        <p className="time-to-win">
+          Time to Win:{" "}
+          <span>{tenzies ? convertSecToMinAndSec(time) : "00:00"}</span>
+        </p>
+        <p className="best-time">
+          Best Time:{" "}
+          <span>{bestTime ? convertSecToMinAndSec(bestTime) : "00:00"}</span>
         </p>
       </div>
       <p className="game-stats-rolls">Number of Rolls: {numOfRolls}</p>
