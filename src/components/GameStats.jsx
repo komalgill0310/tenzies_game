@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export default function GameTime(props) {
+export default function GameStats(props) {
   const {
     time,
     setTime,
@@ -15,8 +15,6 @@ export default function GameTime(props) {
     JSON.parse(localStorage.getItem("bestTime")) || 0
   );
 
-  console.log("best: ", bestTime);
-
   useEffect(() => {
     if (
       !isEffectRun &&
@@ -25,7 +23,6 @@ export default function GameTime(props) {
       setTime(`${currentTime()}`);
       setIsEffectRun(true);
     } else if (tenzies) {
-      console.log("end time: ", currentTime());
       setTime((prevTime) => Math.abs(currentTime() - prevTime));
     }
   }, [dieValuesArr, isEffectRun, tenzies]);
@@ -58,14 +55,14 @@ export default function GameTime(props) {
 
   return (
     <div className="game-stats">
-      <div>
-        <p>Time: {tenzies ? convertSecToMinAndSec(time) : "00:00"}</p>
+      <div className="game-stats-time">
+        <p>Time to Win: {tenzies ? convertSecToMinAndSec(time) : "00:00"}</p>
         <p>
           Best Time:
           {bestTime ? convertSecToMinAndSec(bestTime) : "00:00"}
         </p>
       </div>
-      <p>Number of Rolls: {numOfRolls}</p>
+      <p className="game-stats-rolls">Number of Rolls: {numOfRolls}</p>
     </div>
   );
 }

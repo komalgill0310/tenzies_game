@@ -3,7 +3,7 @@ import { nanoid } from "nanoid";
 import "./App.css";
 import Die from "./components/Die";
 import Confetti from "./components/Confetti";
-import GameTime from "./components/GameTime";
+import GameStats from "./components/GameStats";
 
 function App() {
   const [tenzies, setTenzies] = useState(false);
@@ -78,7 +78,7 @@ function App() {
 
   return (
     <main>
-      <GameTime
+      <GameStats
         time={time}
         setTime={setTime}
         dieValuesArr={dieValuesArr}
