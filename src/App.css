@@ -4,7 +4,7 @@ main {
   flex-shrink: 0;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: space-between; */
   /*Box model stuff*/
   width: 420px;
   height: 400px;
@@ -38,6 +38,7 @@ main {
   display: grid;
   align-items: center;
   justify-content: center;
+  position: relative;
   /*Box model stuff*/
   width: 45.84px;
   height: 45.84px;
@@ -67,4 +68,23 @@ main {
   color: #fff;
   /*Miscellaneous*/
   cursor: pointer;
+}
+
+/* time and rolls Css */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0 31px;
+  width: 420px;
+}
+
+.header div {
+  margin-right: 41px;
+}
+
+.header p {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
 }
