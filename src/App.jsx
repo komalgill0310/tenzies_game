@@ -78,15 +78,6 @@ function App() {
 
   return (
     <main>
-      <GameStats
-        time={time}
-        setTime={setTime}
-        dieValuesArr={dieValuesArr}
-        tenzies={tenzies}
-        numOfRolls={countNumOfRolls}
-        isEffectRun={isEffectRun}
-        setIsEffectRun={setIsEffectRun}
-      />
       <h1 className="title">Tenzies</h1>
       <p className="instructions">
         Roll until all dice are the same. Click each die to freeze it at its
@@ -100,6 +91,15 @@ function App() {
       >
         {tenzies ? "New Game" : "Roll"}
       </button>
+      <GameStats
+        time={time}
+        setTime={setTime}
+        dieValuesArr={dieValuesArr}
+        tenzies={tenzies}
+        numOfRolls={countNumOfRolls}
+        isEffectRun={isEffectRun}
+        setIsEffectRun={setIsEffectRun}
+      />
     </main>
   );
 }

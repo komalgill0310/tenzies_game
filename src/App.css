@@ -1,98 +1,117 @@
 main {
-  /*Display stuff*/
+  background-color: var(--clr-purple);
+  border-radius: 13px;
+  box-shadow: var(--bs);
   display: flex;
-  flex-shrink: 0;
   flex-direction: column;
-  align-items: center;
-  /* justify-content: space-between; */
-  /*Box model stuff*/
-  width: 420px;
-  height: 400px;
-  padding: 33.28px 34.56px 33.92px 34.56px;
-  border-radius: 10px;
-  background: #f5f5f5;
+  font-family: var(--ff-primary);
+  justify-content: center;
+  margin: 3em auto;
+  padding: 0 1em;
 }
 
 .title {
-  font-size: 40px;
+  font-size: var(--fs-h1);
   margin: 0;
+  text-align: center;
 }
 
-.instructions,
-.game-stats {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  margin-top: 0;
+.instructions {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-p);
+  margin: 0;
   text-align: center;
 }
 
 .die-container {
-  /*Display stuff*/
   display: grid;
-  grid-template: auto auto / repeat(5, 1fr);
-  /*Miscellaneous*/
-  gap: 18px;
+  gap: 1.5em;
+  grid-template: repeat(3, auto) / repeat(2, 1fr);
+  margin: 27px auto 0;
+  place-items: center;
+  width: 100%;
 }
 
 .die {
-  /*Display stuff*/
-  display: grid;
   align-items: center;
+  border-radius: 13px;
+  box-shadow: inset 0 0 5px #000040;
+  color: #2b283a;
+  cursor: pointer;
+  display: grid;
+  font-size: var(--fs-div);
+  font-weight: var(--fw-bold);
+  height: 65.84px;
   justify-content: center;
   position: relative;
-  /*Box model stuff*/
-  width: 45.84px;
-  height: 45.84px;
-  border-radius: 3.813px;
-  /*Typography stuff*/
-  font-size: 25.589px;
-  font-weight: 700;
-  color: #2b283a;
-  /*Miscellaneous*/
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
+  transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+  width: 65.84px;
+}
+
+.die:hover {
+  opacity: 0.5;
+  transform: scale(1.2);
 }
 
 .btn-roll-dice {
-  /*Box model stuff*/
-  width: 130.16px;
-  height: 35.84px;
-  margin-top: 26px;
-  border: none;
-  border-radius: 5px;
   background-color: #5035ff;
-  /*Typography stuff*/
-  font-family: "Karla", sans-serif;
-  font-size: 16.384px;
-  font-weight: 700;
-  text-align: center;
-  color: #fff;
-  /*Miscellaneous*/
+  border-radius: 13px;
+  border: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  color: var(--clr-white);
   cursor: pointer;
+  font-family: var(--ff-secondary);
+  font-size: 27px;
+  font-weight: var(--fw-bold);
+  margin-top: 2em;
+  margin: 25.6px auto;
+  padding: 0.5em 2em;
+  text-align: center;
+  transition: transform 200ms ease-in-out;
 }
 
-/* Styles for the Time and Rolls elements */
+/* Hover effect */
+.btn-roll-dice:hover {
+  background-color: #6f4bff;
+  transform: translateY(-2px);
+}
+
+/* Game Stats */
+
 .game-stats {
+  align-items: center;
   display: flex;
-  align-items: start;
+  font-family: var(--ff-secondary);
+  font-size: 1rem;
   justify-content: space-between;
   margin-bottom: 31px;
-  width: 420px;
 }
 
-.game-stats-time {
-  margin-right: 41px;
-}
-
-.game-stats-time p {
+.game-stats p {
   margin: 0;
-  padding: 0 0 5px 0;
-}
-
-.best-time {
-  margin-left: 0;
 }
 
 .game-stats-time span {
-  font-weight: bold;
+  color: var(--clr-gold);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
+}
+
+/* Media Query */
+
+@media (min-width: 700px) {
+  .die-container {
+    grid-template: auto auto / repeat(5, 1fr);
+    gap: 2em;
+    width: auto;
+  }
+
+  .die {
+    width: 85.84px;
+    height: 85.84px;
+  }
+
+  .game-stats {
+    font-size: var(--fs-p);
+  }
 }

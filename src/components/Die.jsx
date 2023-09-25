@@ -8,7 +8,7 @@ export default function Die(prop) {
   };
 
   return (
-    <div className="die dot" style={styles} onClick={holdDice}>
+    <div className="die" style={styles} onClick={holdDice}>
       {value}
     </div>
   );

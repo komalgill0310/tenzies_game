@@ -1,24 +1,62 @@
-@import url("https://fonts.googleapis.com/css2?family=Karla:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&family=Pacifico&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 :root {
-  /*Typography stuff*/
-  font-family: "Karla", sans-serif;
+  --ff-primary: "Pacifico", cursive;
+  --ff-secondary: "Lobster Two", cursive;
+
+  --fw-reg: 400;
+  --fw-bold: 900;
+
+  --clr-purple: #8e44ad;
+  --clr-white: #fff;
+  --clr-accent: #e74c3c;
+  --clr-gold: #ffd700;
+
+  --fs-h1: 3rem;
+  --fs-div: 2.25rem;
+  --fs-p: 1.25rem;
+  --fs-body: 1rem;
+
+  --box-shadow-color: #91dfa7;
+
+  --bs: 0.25em 0.25em 0.75em var(--box-shadow-color),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  /*Miscellaneous*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
 
 body {
-  /*Display stuff*/
+  align-items: center;
+  background-color: var(--clr-gold);
+  color: var(--clr-white);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /*Box model stuff*/
   height: 100vh;
+  line-height: normal;
   margin: 0;
-  background-color: #0b2434;
+  padding: 1em 2em;
+}
+
+@media (min-width: 700px) {
+  body {
+    justify-content: center;
+    padding: 0 2em;
+  }
+
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-div: 3rem;
+    --fs-p: 1.5rem;
+    --fs-body: 1.125rem;
+  }
 }

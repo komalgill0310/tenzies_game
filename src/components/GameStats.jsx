@@ -67,7 +67,7 @@ export default function GameStats(props) {
           </span>
         </p>
       </div>
-      <p className="game-stats-rolls">Number of Rolls: {numOfRolls}</p>
+      <p className="game-stats-rolls">Rolls: {numOfRolls}</p>
     </div>
   );
 }
