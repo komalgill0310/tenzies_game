@@ -41,7 +41,7 @@ body {
   color: var(--clr-white);
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   line-height: normal;
   margin: 0;
   padding: 1em 2em;
