@@ -25,9 +25,9 @@ This project has expanded my knowledge in React development, particularly in the
 
 - **Game Stats**: Displays the number of rolls, time taken to win, and the best time so far.
 
-- **Game Stats**: Adds a festive touch with confetti falling on the screen after completing the game.
+- **Confetti Celebration**: Adds a festive touch with confetti falling on the screen after completing the game.
 
-- **Game Stats**: Records and retrieves previous game data for a personalized gaming experience.
+- **Local Storage**: Records and retrieves previous game data for a personalized gaming experience.
 
 ## Getting Started
 
